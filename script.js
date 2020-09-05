@@ -1,7 +1,7 @@
 var input = document.getElementById("userinput");
 var button = document.getElementById("enter");
 var ul = document.querySelector("ul");
-var list = document.querySelector("li");
+var li = document.querySelectorAll("li");
 function inputLength (){
     return input.value.length;
 }
@@ -21,9 +21,13 @@ function addListAfterInput(){
         createListElement()
     }
 }
-function  linethrough(){
-    document.querySelector("li").classList.add("done")
+function deleteli(){
+     delete li[i];
 }
 button.addEventListener("click", addListAfterClick);
 input.addEventListener("keypress", addListAfterInput);
-list.addEventListener("click", linethrough);
+for (var i = 0 ; i < li.length; i++) {
+    for (var i = 0 ; i < li.length; i++) {
+        li[i].addEventListener('click' , deleteli)
+     }
+ }
