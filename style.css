@@ -9,12 +9,6 @@ h1{
     font-family: 'Caveat', cursive;
     font-size: 8rem;
 }
-table{
-    margin: auto;
-}
-.task{
-    display: flex;
-}
 #button{
     background: white;
 }

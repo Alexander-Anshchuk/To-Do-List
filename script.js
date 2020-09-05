@@ -1,15 +1,14 @@
 var input = document.getElementById("userinput");
 var button = document.getElementById("enter");
 var ul = document.querySelector("ul");
-var task = document.getElementsByClassName("task")[0];
-var tasks = document.getElementsByClassName("tasks");
+var list = document.querySelector("li");
 function inputLength (){
     return input.value.length;
 }
 function createListElement(){
-    var checkbox = document.createElement("input.checkbox")
-    checkbox.appendChild(document.createTextNode(input.value));
-    task.appendChild(tasks);
+    var li = document.createElement("li")
+    li.appendChild(document.createTextNode(input.value));
+    ul.appendChild(li);
     input.value = ""
 }
 function addListAfterClick(){
@@ -22,6 +21,9 @@ function addListAfterInput(){
         createListElement()
     }
 }
+function  linethrough(){
+    document.querySelector("li").classList.add("done")
+}
 button.addEventListener("click", addListAfterClick);
 input.addEventListener("keypress", addListAfterInput);
-
+list.addEventListener("click", linethrough);
