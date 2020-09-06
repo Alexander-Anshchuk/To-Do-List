@@ -18,10 +18,15 @@ input.addEventListener("keypress", function(){
         input.value = "";
     }
 })
-function allitems(){
-    for (var i = 0; i < items.length; i++){
-    items[i].classList.toggle("done")
-    }
-}    
+for (var i = 0; i < items.length; i++){
+    items[i].addEventListener("click",function(){
+        for (var x = 0; x < items.length; x++){
+            items[x].classList.toggle("done")
+        }
+    });
+};
+
+
+   
 
     
